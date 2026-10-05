@@ -1,0 +1,10 @@
+# Versions used for the experiments (Python 3.11, macOS).
+# PySR installs Julia automatically on first use.
+numpy==1.24.4
+pandas==1.5.3
+sympy==1.14.0
+scipy==1.15.3
+matplotlib==3.10.9
+torch==2.14.0
+pysr==2.2.1
+pyCLINE==0.1.12

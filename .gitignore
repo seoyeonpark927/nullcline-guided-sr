@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- project-specific ----
+# Generated data and raw PySR / CLINE runs (recreate with the scripts)
+data/
+outputs/

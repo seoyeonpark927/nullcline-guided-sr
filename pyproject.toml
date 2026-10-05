@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nullsr"
+version = "0.1.0"
+description = "Nullcline-guided symbolic regression for fast-slow dynamical systems"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "sympy",
+    "matplotlib",
+    "torch",
+    "pysr",
+    "pyCLINE",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
