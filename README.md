@@ -6,7 +6,7 @@ project studies that question on the FitzHugh–Nagumo (FHN) model and asks
 whether **nullclines estimated from data** can make symbolic regression more
 reliable.
 
-*Undergraduate research project, June – October 2026.*
+*Undergraduate research, Biomedical Mathematics Group, Institute for Basic Science (IBS), June 2026 – present.*
 
 ```
 du/dt = f · (−u³ + u² + u − v)        fast variable, time-scale separation f
