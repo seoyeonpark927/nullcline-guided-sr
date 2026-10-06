@@ -11,6 +11,7 @@ is one PySR run, re-scored with `src/nullsr/evaluate.py` from its
 | `timescale_sweep/*_true_derivative.csv` | 5 f, dt = 0.1, seed 0 | same scripts with `--true-derivative` |
 | `timescale_sweep/errors.csv` | 5 f × 5 dt | CLINE nullcline RMSE; numerical vs. exact du/dt RMSE |
 | `hybrid/summary.csv` | dt ∈ {0.01, 0.1}, seed 0 (some extra seeds) | `experiments/03_hybrid_sr/03_run_sr.py` |
+| `*/cline_nullclines/` | nullclines estimated by CLINE | `02_timescale_sweep/03_cline_nullcline.py`, `03_hybrid_sr/02_cline_nullcline.py` |
 
 Columns: `success_strict` / `success_relaxed` (0/1) and the simplest passing
 equation and its complexity for each criterion. The criteria are defined in
@@ -26,4 +27,7 @@ Notes on provenance
 * The time-scale sweep data were generated with plain RK4 (one step per dt),
   except f = 15, 20 at dt = 0.1, where plain RK4 diverges and 10 sub-steps
   were used. `01_generate_data.py --legacy` reproduces these files.
-* In `hybrid/summary.csv`, an empty `iter` means 500 PySR iterations.
+* In `hybrid/summary.csv`, `stage = pilot (earlier dataset)` marks runs finished
+  before the hybrid dataset was regenerated (2026-09-17); they are not comparable
+  with the `main` runs. The latest Hybrid runs (2000 iterations, 2026-10-03/04)
+  use CLINE nullclines estimated from all 100 trajectories (`hybrid/cline_nullclines/`).
